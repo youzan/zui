@@ -55,11 +55,11 @@ VantComponent({
       observer: 'reset',
     },
     minDate: {
-      type: null,
+      type: Number,
       value: Date.now(),
     },
     maxDate: {
-      type: null,
+      type: Number,
       value: new Date(
         new Date().getFullYear(),
         new Date().getMonth() + 6,
