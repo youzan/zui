@@ -49,10 +49,6 @@ VantComponent({
       type: null,
       value: 0,
       observer(name) {
-        if (!this.skipInit) {
-          this.skipInit = true;
-        }
-
         if (name !== this.getCurrentName()) {
           this.setCurrentIndexByName(name);
         }
@@ -110,10 +106,8 @@ VantComponent({
         container: () => this.createSelectorQuery().select('.van-tabs'),
       });
 
-      if (!this.skipInit) {
-        this.resize();
-        this.scrollIntoView();
-      }
+      this.resize();
+      this.scrollIntoView();
     });
   },
 
