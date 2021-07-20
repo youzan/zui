@@ -25,6 +25,7 @@
       data-option="{{ item }}"
       class="{{ utils.bem('dropdown-item__option', { active: item.value === value } ) }}"
       clickable
+      value-class="van-dropdown-item__value"
       icon="{{ item.icon }}"
       bind:tap="onOptionTap"
     >
