@@ -11,7 +11,7 @@
   >
     <view
       class="{{ item.titleClass }} {{ utils.bem('dropdown-menu__title', { active: item.showPopup, down: item.showPopup === (direction === 'down') }) }}"
-      style="{{ item.showPopup ? 'color:' + activeColor : '' }}"
+      style="{{ item.showPopup ? 'color:' + (menuActiveColor?menuActiveColor:activeColor) : '' }}"
     >
       <view class="van-ellipsis">
         {{ computed.displayTitle(item) }}

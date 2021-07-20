@@ -12,6 +12,10 @@ VantComponent({
   }),
 
   props: {
+    menuActiveColor: {
+      type: String,
+      observer: 'updateChildrenData',
+    },
     activeColor: {
       type: String,
       observer: 'updateChildrenData',
