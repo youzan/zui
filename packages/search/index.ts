@@ -83,5 +83,9 @@ VantComponent({
     onClear(event: WechatMiniprogram.CustomEvent) {
       this.$emit('clear', event.detail);
     },
+
+    onClickInput: function (event) {
+      this.$emit('click-input', event.detail);
+    },    
   },
 });
